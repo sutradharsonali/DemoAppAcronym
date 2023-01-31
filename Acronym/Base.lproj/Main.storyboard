@@ -56,12 +56,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rX-5i-Ia9">
+                                <rect key="frame" x="10" y="421" width="394" height="54"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="ecR-B4-rRb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vm1-S2-6pu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="9rX-5i-Ia9" firstAttribute="centerY" secondItem="l87-F1-ylN" secondAttribute="centerY" id="2vV-7I-ErI"/>
+                            <constraint firstItem="vm1-S2-6pu" firstAttribute="trailing" secondItem="9rX-5i-Ia9" secondAttribute="trailing" constant="10" id="8R8-gX-ywX"/>
                             <constraint firstItem="Tha-ca-hmz" firstAttribute="leading" secondItem="vm1-S2-6pu" secondAttribute="leading" id="Dq6-wA-GmC"/>
                             <constraint firstItem="Tha-ca-hmz" firstAttribute="top" secondItem="cys-nO-tFD" secondAttribute="bottom" constant="20" id="Uhy-TA-qhR"/>
+                            <constraint firstItem="9rX-5i-Ia9" firstAttribute="leading" secondItem="vm1-S2-6pu" secondAttribute="leading" constant="10" id="WAX-Bv-tzb"/>
                             <constraint firstItem="cys-nO-tFD" firstAttribute="top" secondItem="vm1-S2-6pu" secondAttribute="top" constant="10" id="WuA-8Y-VSJ"/>
                             <constraint firstItem="vm1-S2-6pu" firstAttribute="trailing" secondItem="cys-nO-tFD" secondAttribute="trailing" constant="10" id="XB1-tI-JBI"/>
                             <constraint firstItem="cys-nO-tFD" firstAttribute="leading" secondItem="vm1-S2-6pu" secondAttribute="leading" constant="10" id="r53-K0-ovB"/>
@@ -71,6 +84,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="oia-KU-h90"/>
                     <connections>
+                        <outlet property="lblAlert" destination="9rX-5i-Ia9" id="eHJ-6T-qks"/>
                         <outlet property="tableview" destination="Tha-ca-hmz" id="7eN-x5-npx"/>
                         <outlet property="txtFieldSearchValue" destination="cys-nO-tFD" id="4mf-7R-2PE"/>
                     </connections>
