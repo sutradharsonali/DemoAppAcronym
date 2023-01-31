@@ -4,6 +4,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableview : UITableView!
@@ -14,11 +15,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "ACRONYM"
+        acronymViewModel.client = HttpUtility()
+        self.setUI()
+        self.bindData()
+        
+    }
+    
+    func setUI(){
+        self.navigationItem.title = AcronymConstants.title
         self.tableview.rowHeight = 50.0
         txtFieldSearchValue.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-
-        acronymViewModel.client = HttpUtility()
+    }
+    
+    func bindData(){
         acronymViewModel.acronyms.bind { [weak self]_ in
             if ((self?.acronymViewModel.acronyms.value?.isEmpty) != nil){
                 DispatchQueue.main.async {
@@ -32,11 +41,11 @@ class ViewController: UIViewController {
                     self?.tableview.reloadData()
                     self?.lblAlert.isHidden = false
                     if self?.txtFieldSearchValue.text == "" {
-                        self?.lblAlert.text = "Type to Search Acronym"
+                        self?.lblAlert.text = AcronymConstants.searchAcronym
                     }
                     else
                     {
-                        self?.lblAlert.text = "No Acronym found"
+                        self?.lblAlert.text = AcronymConstants.emptyResult
                     }
                     
                 }
