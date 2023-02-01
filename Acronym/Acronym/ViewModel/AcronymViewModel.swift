@@ -15,10 +15,11 @@ class AcronymViewModel {
     var client : HttpUtilityProtocol? = nil
     
 
-    
+    // Retrive acroynms for searchValue
     func getAcronymRecords(searchValue : String)
     {
-        let queryItems = [URLQueryItem(name: "sf", value: searchValue), URLQueryItem(name: "If", value: nil)]
+        self.client = HttpUtility()
+        let queryItems = [URLQueryItem(name: AcronymConstants.sf, value: searchValue), URLQueryItem(name: AcronymConstants.If, value: nil)]
         var urlComps = URLComponents(string: Endpoints.getAcomine)!
         urlComps.queryItems = queryItems
         let result = urlComps.url!

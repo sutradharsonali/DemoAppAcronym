@@ -4,6 +4,8 @@
 
 import Foundation
 
+// MARK :- Observable class to bind data and view
+
 class Observable<T>{
     var value : T?{
         didSet{

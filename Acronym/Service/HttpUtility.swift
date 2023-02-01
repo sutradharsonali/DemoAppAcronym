@@ -11,6 +11,7 @@ protocol HttpUtilityProtocol {
 
 struct HttpUtility: HttpUtilityProtocol
 {
+    // MARK :-   API call method 
     func getApiData<T:Decodable>(requestUrl: URL, resultType: T.Type,completionHandler:@escaping(_ result: T?)->Void) {
         
         
@@ -23,7 +24,7 @@ struct HttpUtility: HttpUtilityProtocol
                     completionHandler(result)
                 }
                 catch {
-                        print("error: ", error.localizedDescription)
+                        print(error.localizedDescription)
                     }
             }
         }.resume()

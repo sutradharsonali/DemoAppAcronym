@@ -12,21 +12,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblAlert : UILabel!
     let acronymViewModel = AcronymViewModel()
    
-
+    // MARK :- ViewLifeCycle Function
     override func viewDidLoad() {
         super.viewDidLoad()
-        acronymViewModel.client = HttpUtility()
         self.setUI()
         self.bindData()
         
     }
     
+    // MARK :- SetUI Function
     func setUI(){
         self.navigationItem.title = AcronymConstants.title
         self.tableview.rowHeight = 50.0
         txtFieldSearchValue.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
-    
+    // MARK :- Binding Data with View Function
     func bindData(){
         acronymViewModel.acronyms.bind { [weak self]_ in
             if ((self?.acronymViewModel.acronyms.value?.isEmpty) != nil){
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+    // MARK :- TextField method
     @objc func textFieldDidChange(){
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
     }
 }
 
-
+// MARK :- TableView DataSource method
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,7 +75,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableview.dequeueReusableCell(withIdentifier: "Cell") as! AcronymTableViewCell
+        let cell = self.tableview.dequeueReusableCell(withIdentifier: AcronymConstants.cellIdentifier) as! AcronymTableViewCell
         cell.textLabel?.text = self.acronymViewModel.acronyms.value?[indexPath.row].lf
         return cell
     }

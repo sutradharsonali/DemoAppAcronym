@@ -3,6 +3,8 @@
 
 
 import Foundation
+
+// MARK :- Data Model class
 struct Acronym: Codable {
     let sf: String
     let lfs: [LF]
