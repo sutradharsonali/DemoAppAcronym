@@ -5,7 +5,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class AcronymsSearchViewController: UIViewController {
     
     @IBOutlet weak var tableview : UITableView!
     @IBOutlet weak var txtFieldSearchValue : UITextField!
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
 }
 
 // MARK :- TableView DataSource method
-extension ViewController : UITableViewDelegate, UITableViewDataSource {
+extension AcronymsSearchViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return acronymViewModel.acronyms.value?.count ?? 0

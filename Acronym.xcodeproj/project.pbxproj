@@ -18,7 +18,7 @@
 		47BFC3512982DCCB00E029F4 /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFC3502982DCCB00E029F4 /* HttpUtility.swift */; };
 		47BFC3532982DCD700E029F4 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFC3522982DCD700E029F4 /* EndPoints.swift */; };
 		47BFC3592982DD3300E029F4 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFC3582982DD3300E029F4 /* Observable.swift */; };
-		47BFC35C2982DD4300E029F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFC35A2982DD4300E029F4 /* ViewController.swift */; };
+		47BFC35C2982DD4300E029F4 /* AcronymsSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFC35A2982DD4300E029F4 /* AcronymsSearchViewController.swift */; };
 		47BFC35D2982DD4300E029F4 /* AcronymTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFC35B2982DD4300E029F4 /* AcronymTableViewCell.swift */; };
 		47BFC35F2982DD4D00E029F4 /* Acronym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFC35E2982DD4D00E029F4 /* Acronym.swift */; };
 		47BFC3612982DD6A00E029F4 /* AcronymViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BFC3602982DD6A00E029F4 /* AcronymViewModel.swift */; };
@@ -62,7 +62,7 @@
 		47BFC3502982DCCB00E029F4 /* HttpUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
 		47BFC3522982DCD700E029F4 /* EndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		47BFC3582982DD3300E029F4 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		47BFC35A2982DD4300E029F4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47BFC35A2982DD4300E029F4 /* AcronymsSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcronymsSearchViewController.swift; sourceTree = "<group>"; };
 		47BFC35B2982DD4300E029F4 /* AcronymTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcronymTableViewCell.swift; sourceTree = "<group>"; };
 		47BFC35E2982DD4D00E029F4 /* Acronym.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acronym.swift; sourceTree = "<group>"; };
 		47BFC3602982DD6A00E029F4 /* AcronymViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcronymViewModel.swift; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				47BFC35B2982DD4300E029F4 /* AcronymTableViewCell.swift */,
-				47BFC35A2982DD4300E029F4 /* ViewController.swift */,
+				47BFC35A2982DD4300E029F4 /* AcronymsSearchViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,7 +355,7 @@
 				47BFC3612982DD6A00E029F4 /* AcronymViewModel.swift in Sources */,
 				47BFC3752989333B00E029F4 /* Constants.swift in Sources */,
 				47BFC3172982DBDB00E029F4 /* AppDelegate.swift in Sources */,
-				47BFC35C2982DD4300E029F4 /* ViewController.swift in Sources */,
+				47BFC35C2982DD4300E029F4 /* AcronymsSearchViewController.swift in Sources */,
 				47BFC3592982DD3300E029F4 /* Observable.swift in Sources */,
 				47BFC3192982DBDB00E029F4 /* SceneDelegate.swift in Sources */,
 			);
